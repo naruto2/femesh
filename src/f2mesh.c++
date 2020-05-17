@@ -18,7 +18,7 @@ void f2mesh(FILE *fp, vector<xyc>&Z, vector<nde>&N){
   int m=0, n=0, i;
   char *buf, *label;
   double x, y;
-  int a,b,c,A,B,C;
+  long int a,b,c,A,B,C;
 
   if ( fp == stdin ) fp = fcopy();
 

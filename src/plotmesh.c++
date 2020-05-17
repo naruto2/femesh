@@ -13,7 +13,7 @@ using namespace std;
 void plotmesh(vector<xyc>&Z,vector<nde>&N)
 {
   FILE *fp = stdout;
-  unsigned long e, v, a, b, c;
+  unsigned long e, a, b, c;
 
   fp = popen("gnuplot","w");
 

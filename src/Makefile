@@ -24,7 +24,7 @@ SRCS =	rotate_right.c++ \
 OBJS = $(SRCS:.c++=.o)
 .SUFFIXES: .c++ .o
 
-CPPFLAGS =
+CPPFLAGS = -Wall
 LDFLAGS = 
 
 .PHONY: all clean
@@ -45,3 +45,11 @@ clean :
 	rm -f $(OBJS) $(PROG) lib/libxmesh.a 
 
 
+test: $(PROG)
+	./femesh ../kanto.xyc -o ../tmp.mesh
+	diff ../kanto.mesh ../tmp.mesh
+	./femesh ../pt.xyc -o ../tmp.mesh
+	diff ../pt.mesh ../tmp.mesh
+	./femesh ../square.xyc -o ../tmp.mesh
+	diff ../square.mesh ../tmp.mesh
+	rm -f ../tmp.mesh
