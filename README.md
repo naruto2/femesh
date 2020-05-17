@@ -1,8 +1,8 @@
-# femesh
+# f e m e s h
 femesh - A generator of FEM mesh.
   doc/femesh.txt is how to use femesh command.
 
-How to build xmesh command.
+How to build femesh command.
 $ cd src; make
 
 参考文献
