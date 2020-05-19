@@ -15,8 +15,7 @@ void plotmesh(vector<xyc>&Z,vector<nde>&N)
   FILE *fp = stdout;
   unsigned long e, a, b, c;
 
-  fp = popen("gnuplot","w");
-
+  fp = popen("export QT_LOGGING_RULES='*=false'; gnuplot","w");
 
   fprintf(fp,"plot '-' title \"\" with lines\n");
   
@@ -31,7 +30,7 @@ void plotmesh(vector<xyc>&Z,vector<nde>&N)
 
   fprintf(fp,"e\n");
   fflush(fp);
-  sleep(65535);
+  getchar();
+  fprintf(fp,"exit\n");
   pclose(fp);
-  exit(0);
 }
