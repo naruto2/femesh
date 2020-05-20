@@ -50,4 +50,6 @@ void in2xyc(istream &is,vector<xyc>&Z)
     Z[s.size()] = s.top();
     s.pop();
   }
+
+  printf("bar = Z.size() %ld\n",Z.size());
 }
