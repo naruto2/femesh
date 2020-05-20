@@ -10,11 +10,8 @@ SRCS =	rotate_right.c++ \
 	count_nodes.c++ \
 	generate_fN.c++ \
 	plotmesh.c++ \
-	in2xyc.c++ \
 	sortmesh.c++ \
 	p2.c++ \
-	dimp2.c++ \
-	delta.c++ \
 	op.c++ \
 	scanxyc.c++ \
 	printmesh.c++ \
