@@ -18,7 +18,8 @@ extern void plotmesh( vector<xyc>&, vector<nde>& );
 extern void sortmesh( vector<xyc>&, vector<nde>& );
 extern void p2( vector<xyc>&, vector<nde>& );
 extern void f2mesh(FILE*, vector<xyc>&, vector<nde>&);
-extern long dimp2(vector<nde>&N);
+extern long dimp2( vector<nde>& );
 extern double delta(int, vector<xyc>&, vector<nde>&);
+extern void femesh( vector<xyc>&, vector<nde>& );
 
 #endif

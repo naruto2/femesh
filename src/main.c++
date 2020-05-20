@@ -47,9 +47,7 @@ int main(int argc, char **argv)
   }
 
  ToDo:
-  delaunay(Z, N);
-  sortmesh(Z, N);
-  p2(Z, N);
+  femesh(Z,N);
 
   if (defop("-x")) plotmesh(Z,N);
   else            printmesh(Z,N);

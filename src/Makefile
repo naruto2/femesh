@@ -18,6 +18,7 @@ SRCS =	rotate_right.c++ \
 	delta.c++ \
 	op.c++ \
 	printmesh.c++ \
+	femesh.c++ \
 	main.c++
 
 
