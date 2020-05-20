@@ -15,7 +15,6 @@ extern void in2xyc( istream &, vector<xyc>& );
 extern void delaunay( vector<xyc>&, vector<nde>& );
 extern void sortmesh( vector<xyc>&, vector<nde>& );
 extern void p2( vector<xyc>&, vector<nde>& );
-extern void f2mesh(FILE*, vector<xyc>&, vector<nde>&);
 extern long dimp2( vector<nde>& );
 extern double delta(int, vector<xyc>&, vector<nde>&);
 extern void scanxyc( vector<xyc>& );

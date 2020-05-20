@@ -13,7 +13,6 @@ SRCS =	rotate_right.c++ \
 	in2xyc.c++ \
 	sortmesh.c++ \
 	p2.c++ \
-	f2mesh.c++ \
 	dimp2.c++ \
 	delta.c++ \
 	op.c++ \
