@@ -13,7 +13,7 @@ typedef struct{ double x, y; char *label; } xyc;
 
 extern void in2xyc( istream &, vector<xyc>& );
 extern void delaunay( vector<xyc>&, vector<nde>& );
-extern void outmesh( ostream &, vector<xyc>&, vector<nde>& );
+extern void printmesh(vector<xyc>&, vector<nde>& );
 extern void plotmesh( vector<xyc>&, vector<nde>& );
 extern void sortmesh( vector<xyc>&, vector<nde>& );
 extern void p2( vector<xyc>&, vector<nde>& );

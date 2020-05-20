@@ -9,7 +9,6 @@ SRCS =	rotate_right.c++ \
 	delaunay.c++ \
 	count_nodes.c++ \
 	generate_fN.c++ \
-	outmesh.c++ \
 	plotmesh.c++ \
 	in2xyc.c++ \
 	sortmesh.c++ \
@@ -18,6 +17,7 @@ SRCS =	rotate_right.c++ \
 	dimp2.c++ \
 	delta.c++ \
 	op.c++ \
+	printmesh.c++ \
 	main.c++
 
 
@@ -46,10 +46,10 @@ clean :
 
 
 test: $(PROG)
-	./femesh ../kanto.xyc -o ../tmp.mesh
+	./femesh ../kanto.xyc > ../tmp.mesh
 	diff ../kanto.mesh ../tmp.mesh
-	./femesh ../pt.xyc -o ../tmp.mesh
+	./femesh ../pt.xyc > ../tmp.mesh
 	diff ../pt.mesh ../tmp.mesh
-	./femesh ../square.xyc -o ../tmp.mesh
+	./femesh ../square.xyc > ../tmp.mesh
 	diff ../square.mesh ../tmp.mesh
 	rm -f ../tmp.mesh

@@ -6,6 +6,6 @@ using namespace std;
 
 void    initop(int &argc, char **&argv);
 int     defop(string str);
-string  getop(string str);
+string  op(string str);
 
 #endif

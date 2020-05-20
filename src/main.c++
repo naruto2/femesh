@@ -30,11 +30,11 @@ int main(int argc, char **argv)
   }
   
   if ( defop("-f") ) {
-    if (getop("-f") == "-" ) {
+    if (op("-f") == "-" ) {
       in2xyc(cin,Z);
     }
     else {
-      ifs.open(getop("-f"));
+      ifs.open(op("-f"));
       if (!ifs) {
 	cerr << "Error: Can't open file (femesh)" << endl;
 	return 0;
@@ -51,23 +51,7 @@ int main(int argc, char **argv)
   sortmesh(Z, N);
   p2(Z, N);
 
-  if (!defop("-o") && !defop("-x")) {
-    outmesh(cout,Z,N);
-    return 0;
-  }
-  
-  if ( defop("-o") ) {
-    if ( getop("-o") == "-" ) {
-      outmesh(cout,Z,N);
-    }
-    else {
-      ofstream ofs;
-      ofs.open(getop("-o").c_str(), ios::out);
-      outmesh(ofs,Z,N);
-    }
-  }
-  else
-    plotmesh(Z,N);
-
+  if (defop("-x")) plotmesh(Z,N);
+  else            printmesh(Z,N);
   return 0;
 }

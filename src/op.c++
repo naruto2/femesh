@@ -19,7 +19,7 @@ int defop(string str)
 }
 
 
-string getop(string str)
+string op(string str)
 {
   int i;
 
