@@ -7,11 +7,15 @@ using namespace std;
 
 int main(int argc, char **argv)
 { 
-  initop(argc,argv);
+  FILE *fp = stdin;
   vector<xyc> Z;
   vector<nde> N;
 
-  scanxyc(Z);
+  initop(argc,argv);
+  
+  if (argc > 1 ) fp = fopen(argv[1],"r");
+
+  fscanxyc(fp,Z);
 
   femesh(Z,N);
 

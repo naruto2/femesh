@@ -1,4 +1,5 @@
 #include <cstdio>
+#include <cstring>
 #include <iostream>
 #include <vector>
 #include "op.hpp"
@@ -16,7 +17,8 @@ static char *label(vector<xyc>&Z,int i)
 void printmesh(vector<xyc>&Z,vector<nde>&N)
 {
 
-  if ( defop("-o") ) freopen( op("-o").c_str(), "w", stdout);
+  if ( defop("-o") && strcmp(op("-o").c_str(),"-") )
+    freopen( op("-o").c_str(), "w", stdout);
 
   printf("<xyc>\n");
 

@@ -13,7 +13,7 @@ SRCS =	rotate_right.c++ \
 	sortmesh.c++ \
 	p2.c++ \
 	op.c++ \
-	scanxyc.c++ \
+	fscanxyc.c++ \
 	printmesh.c++ \
 	femesh.c++ \
 	main.c++
@@ -44,10 +44,10 @@ clean :
 
 
 test: $(PROG)
-	./femesh <../kanto.xyc > ../tmp.mesh
+	./femesh ../kanto.xyc -o ../tmp.mesh
 	diff ../kanto.mesh ../tmp.mesh
-	./femesh <../pt.xyc > ../tmp.mesh
+	./femesh ../pt.xyc -o ../tmp.mesh
 	diff ../pt.mesh ../tmp.mesh
-	./femesh <../square.xyc > ../tmp.mesh
+	./femesh ../square.xyc -o ../tmp.mesh
 	diff ../square.mesh ../tmp.mesh
 	rm -f ../tmp.mesh

@@ -9,7 +9,7 @@ void printxyc( vector<xyc>& Z)
 }
 
 
-void scanxyc( vector<xyc>& Z)
+void fscanxyc(FILE *fp, vector<xyc>& Z)
 {
   xyc z;
   double x=0.0, y=0.0;
@@ -18,8 +18,8 @@ void scanxyc( vector<xyc>& Z)
   Z.push_back(z);
 
   while(1) {
-    fgets(buf, 999, stdin);
-    if (feof(stdin)) break;
+    fgets(buf, 999, fp);
+    if (feof(fp)) break;
     *label = 0;
     sscanf(buf,"%lf %lf %s",&x,&y,label);
     z.x = x; z.y = y;
