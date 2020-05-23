@@ -1,10 +1,8 @@
-#ifndef SPARSEMATRIX_H
-#define SPARSEMATRIX_H
-#include <iostream>
+#ifndef MATRIX_H
+#define MATRIX_H
+
 #include <vector>
 #include <map>
-#include <cstdio>
-#include <unistd.h>
 
 using namespace std;
 
@@ -16,4 +14,6 @@ public:
   matrix(long n) : vector< map<long, T> >(n){};
 };
 
+
+int solver(matrix<double>&A, vector<double>&x, vector<double>&b);
 #endif

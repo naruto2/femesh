@@ -1,27 +1,6 @@
-#ifndef INCIRCLE_HPP_
-#define INCIRCLE_HPP_
-
-#include <vector>
-using namespace std;
-
 #include "xmesh.hpp"
-#include "cramer3.hpp"
-#include "distance2.hpp"
 #include "matrix.hpp"
-
-
-
-int solver(matrix<double>&A, vector<double>&x, vector<double>&b)
-{
-  cramer3(&x[0],&x[1],&x[2],
-	  A[0][0],A[0][1],A[0][2],
-	  A[1][0],A[1][1],A[1][2],
-	  A[2][0],A[2][1],A[2][2],
-	  b[0],
-	  b[1],
-	  b[2]);
-  return 0;
-}
+#include "distance2.hpp"
 
 
 int incircle(vector<xyc>&Z, vector<nde> &N, int p,int e2)
@@ -51,4 +30,3 @@ int incircle(vector<xyc>&Z, vector<nde> &N, int p,int e2)
   return distance2(x0,y0,U[0]/2.0,U[1]/2.0) - distance2(x,y,U[0]/2.0,U[1]/2.0)
     > 0.0 ? 1:0;
 }
-#endif

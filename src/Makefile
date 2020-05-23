@@ -13,6 +13,8 @@ SRCS =	rotate_right.c++ \
 	sortmesh.c++ \
 	p2.c++ \
 	op.c++ \
+	incircle.c++ \
+	solver.c++ \
 	fscanxyc.c++ \
 	printmesh.c++ \
 	femesh.c++ \

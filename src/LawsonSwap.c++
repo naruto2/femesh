@@ -2,7 +2,6 @@
 #include <stack>
 using namespace std;
 #include "xmesh.hpp"
-#include "incircle.hpp"
 #include "Lawson.hpp"
 
 extern void N_set(vector<nde>&,int ,int ,int ,int ,int ,int ,int );

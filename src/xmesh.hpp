@@ -14,4 +14,5 @@ extern void printxyc( vector<xyc>& );
 extern void femesh( vector<xyc>&, vector<nde>& );
 extern void plotmesh( vector<xyc>&, vector<nde>& );
 extern void printmesh( vector<xyc>&, vector<nde>& );
+extern int incircle(vector<xyc>&, vector<nde> &, int,int);
 #endif
