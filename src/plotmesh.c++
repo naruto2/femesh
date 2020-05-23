@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <vector>
 #include "xmesh.hpp"
+#include "op.hpp"
 
 
 void plotmesh(vector<xyc>&Z, vector<nde>&N)
@@ -11,8 +12,13 @@ void plotmesh(vector<xyc>&Z, vector<nde>&N)
 
   fp = popen("export QT_LOGGING_RULES='*=false'; gnuplot","w");
 
+  if ( defop("-n") ) {
+    for(unsigned long v=1;v<Z.size();v++)
+      fprintf(fp,"set label \"%ld\" at %f, %f;\n",v,Z[v].x,Z[v].y);
+  }
+
   fprintf(fp,"plot '-' title \"\" with lines\n");
-  
+
   for (e=1; e<N.size(); e++) {
     a = N[e].a, b = N[e].b, c = N[e].c;
     fprintf(fp,"%f %f\n",Z[a].x,Z[a].y);
@@ -21,7 +27,7 @@ void plotmesh(vector<xyc>&Z, vector<nde>&N)
     fprintf(fp,"%f %f\n",Z[a].x,Z[a].y);
     fprintf(fp,"\n\n");
   }
-
+  
   fprintf(fp,"e\n");
   fflush(fp);
   getchar();
