@@ -1,5 +1,5 @@
 #include "matrix.hpp"
-
+using namespace std;
 
 template<class Real>
 Real sarrus(Real a11,Real a12,Real a13,

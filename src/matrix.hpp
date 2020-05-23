@@ -4,16 +4,15 @@
 #include <vector>
 #include <map>
 
-using namespace std;
 
 template<typename T>
-class matrix : public vector< map<long, T> > {
+class matrix : public std::vector< std::map<long, T> > {
 
 public:
   matrix(){}
-  matrix(long n) : vector< map<long, T> >(n){};
+  matrix(long n) : std::vector< std::map<long, T> >(n){};
 };
 
 
-int solver(matrix<double>&A, vector<double>&x, vector<double>&b);
+int solver(matrix<double>&A,std::vector<double>&x,std::vector<double>&b);
 #endif

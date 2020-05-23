@@ -1,11 +1,9 @@
-#ifndef _EST_OP_HPP_
-#define _EST_OP_HPP_
+#ifndef _OP_HPP_
+#define _OP_HPP_
 
 #include <string>
-using namespace std;
 
-void    initop(int &argc, char **&argv);
-int     defop(string str);
-string  op(string str);
-
+void     initop(int &argc, char **&argv);
+int       defop(std::string str);
+std::string  op(std::string str);
 #endif

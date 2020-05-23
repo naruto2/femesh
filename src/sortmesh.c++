@@ -35,7 +35,7 @@ bool operator>(const ende& left, const ende& right)
   return left.y > right.y;
 }
 
-extern void sortmesh(vector<xyc> &Z0, vector<nde> &N0)
+void sortmesh(vector<xyc> &Z0, vector<nde> &N0)
 {
   unsigned long i;
 
@@ -115,4 +115,3 @@ extern void sortmesh(vector<xyc> &Z0, vector<nde> &N0)
   exit(0);
 #endif 
 }
-

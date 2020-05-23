@@ -1,4 +1,5 @@
 #include "op.hpp"
+using namespace std;
 
 static int    argc;
 static char **argv;
