@@ -1,10 +1,8 @@
 #include <vector>
-using namespace std;
-#include "xmesh.hpp"
+#include "femesh.hpp"
 #include "distance2.hpp"
+using namespace std;
 
-extern void rotate_right(vector<nde>&,int);
-extern void rotate_left( vector<nde>&,int);
 
 int degeneracy(vector<xyc>&Z, vector<nde>&N,int e1,int e2)
 { int a, d, W, Y; double x1,y1,x2,y2,x3,y3,x4,y4;

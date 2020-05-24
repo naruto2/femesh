@@ -1,13 +1,8 @@
 #include <cstdio>
 #include <vector>
+#include "femesh.hpp"
 using namespace std;
-#include "xmesh.hpp"
 
-extern void super_triangle(vector<xyc>&);
-extern void LawsonSwap(vector<xyc>&, vector<nde>&);
-extern void vanish_boundary_triangle(vector<xyc>&, vector<nde>&);
-extern int count_nodes(vector<nde>&);
-extern int generate_fN(vector<nde>&, vector<int>&);
 
 void delaunay(vector<xyc>&Zo, vector<nde>&No)
 { int i, n, z; 

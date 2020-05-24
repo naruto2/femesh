@@ -1,11 +1,12 @@
-#include "xmesh.hpp"
+#include "femesh.hpp"
 #include "matrix.hpp"
 #include "distance2.hpp"
+using namespace std;
 
 
 int incircle(vector<xyc>&Z, vector<nde> &N, int p,int e2)
 {
-  double x,y,x0,y0,x1,y1,x2,y2;
+  static double x,y,x0,y0,x1,y1,x2,y2;
   
   if ( e2 == 0 ) return 0;
   
@@ -14,8 +15,8 @@ int incircle(vector<xyc>&Z, vector<nde> &N, int p,int e2)
   x1=Z[N[e2].b].x;  y1=Z[N[e2].b].y;
   x2=Z[N[e2].c].x;  y2=Z[N[e2].c].y;
 
-  matrix<double> A(3);
-  vector<double> U(3),B(3);
+  static matrix<double> A(3);
+  static vector<double> U(3),B(3);
 
   A[0][0] = x0; A[0][1] = y0; A[0][2] = 1.0;
   A[1][0] = x1; A[1][1] = y1; A[1][2] = 1.0;

@@ -3,9 +3,9 @@
 #include <vector>
 #include <algorithm>
 #include <functional>
-#include "xmesh.hpp"
-
+#include "femesh.hpp"
 using namespace std;
+
 
 typedef struct { int i, a, b, c, A, B, C; double x, y; } ende;
 typedef struct { int i; double x, y; char *label; } exyc;
@@ -34,6 +34,7 @@ bool operator>(const ende& left, const ende& right)
   if ( left.y == right.y ) return left.x > right.x;
   return left.y > right.y;
 }
+
 
 void sortmesh(vector<xyc> &Z0, vector<nde> &N0)
 {
@@ -102,16 +103,4 @@ void sortmesh(vector<xyc> &Z0, vector<nde> &N0)
     N0[i].B = N[i].B;
     N0[i].C = N[i].C;
   }
-
-#if 0 // データデバッグプリントフェーズ  
-  printf("<xyc>\n");
-  for ( i=0; i<Z.size(); i++)
-    printf("%ld %f %f %s\n",i,Z[i].x,Z[i].y,Z[i].label);
-
-  printf("<nde>\n");
-  for ( i=0; i<N.size(); i++)
-    printf("%ld %d %d %d %d %d %d\n",i,
-	   N[i].a,N[i].b,N[i].c,N[i].A,N[i].B,N[i].C);
-  exit(0);
-#endif 
 }

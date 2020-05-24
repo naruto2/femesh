@@ -1,5 +1,6 @@
-#ifndef MIN2_HPP_
-#define MIN2_HPP_
+#ifndef _MIN2_HPP_
+#define _MIN2_HPP_
+
 
 template<class Real>
 Real min2(Real a, Real b)

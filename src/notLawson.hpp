@@ -2,9 +2,10 @@
 #define NOTLAWSON_HPP_
 
 #include <vector>
-using namespace std;
-#include "xmesh.hpp"
+#include "femesh.hpp"
 #include "fplane.hpp"
+using namespace std;
+
 
 template<class Real>
 int notLawson(vector<xyc>&Z,vector<nde>&N, Real x, Real y)

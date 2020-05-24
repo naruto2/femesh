@@ -1,11 +1,9 @@
 #include <vector>
 #include <stack>
-using namespace std;
-#include "xmesh.hpp"
+#include "femesh.hpp"
 #include "Lawson.hpp"
+using namespace std;
 
-extern void N_set(vector<nde>&,int ,int ,int ,int ,int ,int ,int );
-extern int degeneracy(vector<xyc>&,vector<nde>&,int ,int );
 
 void LawsonSwap(vector<xyc>&Z, vector<nde>&N)
 {

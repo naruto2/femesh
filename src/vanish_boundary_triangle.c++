@@ -1,7 +1,8 @@
 #include <cstdlib>
 #include <vector>
+#include "femesh.hpp"
 using namespace std;
-#include "xmesh.hpp"
+
 
 void vanish_boundary_triangle(vector<xyc>&Z, vector<nde>&N)
 {

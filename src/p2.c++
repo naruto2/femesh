@@ -1,9 +1,11 @@
 #include <cstdio>
 #include <vector>
-#include "xmesh.hpp"
+#include "femesh.hpp"
 #include "for_nde.hpp"
+using namespace std;
 
-void p2(std::vector<xyc>&Z,std::vector<nde>&N)
+
+void p2( vector<xyc>&Z, vector<nde>&N)
 {
   int i, e;
 

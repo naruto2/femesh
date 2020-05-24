@@ -1,5 +1,5 @@
-#ifndef est_for_nde_hpp
-#define est_for_nde_hpp
+#ifndef _FOR_NDE_HPP_
+#define _FOR_NDE_HPP_
 
 #include <cstdio>
 #include <iterator>

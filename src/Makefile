@@ -17,8 +17,7 @@ SRCS =	rotate_right.c++ \
 	solver.c++ \
 	fscanxyc.c++ \
 	printmesh.c++ \
-	femesh.c++ \
-	main.c++
+	femesh.c++ 
 
 
 OBJS = $(SRCS:.c++=.o)
@@ -32,24 +31,18 @@ LDFLAGS =
 all: $(PROG)
 
 $(PROG) : $(OBJS)
-	c++ $(OBJS) -o $@ $(LDFLAGS)
+	c++ main.c++ $(OBJS) -o $@ $(LDFLAGS)
 
 .c++.o:
 	c++ $(CPPFLAGS) -c $< 
 
 obj: $(OBJS)
-	ar cr lib/libxmesh.a $(OBJS)
+	ar cr libfemesh.a $(OBJS)
 	rm *.o
 
 clean :
-	rm -f $(OBJS) $(PROG) lib/libxmesh.a 
+	rm -f $(OBJS) $(PROG) libfemesh.a 
 
 
 test: $(PROG)
-	./femesh ../kanto.xyc -o ../tmp.mesh
-	diff ../kanto.mesh ../tmp.mesh
-	./femesh ../pt.xyc -o ../tmp.mesh
-	diff ../pt.mesh ../tmp.mesh
-	./femesh ../square.xyc -o ../tmp.mesh
-	diff ../square.mesh ../tmp.mesh
-	rm -f ../tmp.mesh
+	./test.sh

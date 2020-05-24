@@ -1,10 +1,5 @@
-#include "xmesh.hpp"
-
-
-extern void delaunay( vector<xyc>&, vector<nde>& );
-extern void sortmesh( vector<xyc>&, vector<nde>& );
-extern void p2( vector<xyc>&, vector<nde>& );
-
+#include "femesh.hpp"
+using namespace std;
 
 void femesh(vector<xyc>&Z, vector<nde>&N)
 {
