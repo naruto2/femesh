@@ -30,7 +30,7 @@ LDFLAGS =
 
 all: $(PROG)
 
-$(PROG) : $(OBJS)
+$(PROG) : $(OBJS) 
 	c++ main.c++ $(OBJS) -o $@ $(LDFLAGS)
 
 .c++.o:
@@ -42,7 +42,6 @@ obj: $(OBJS)
 
 clean :
 	rm -f $(OBJS) $(PROG) libfemesh.a 
-
 
 test: $(PROG)
 	./test.sh

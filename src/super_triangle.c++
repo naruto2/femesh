@@ -1,7 +1,5 @@
 #include <vector>
 #include "femesh.hpp"
-#include "max2.hpp"
-#include "min2.hpp"
 using namespace std;
 
 

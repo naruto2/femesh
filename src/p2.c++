@@ -1,7 +1,6 @@
 #include <cstdio>
 #include <vector>
 #include "femesh.hpp"
-#include "for_nde.hpp"
 using namespace std;
 
 
@@ -24,7 +23,4 @@ void p2( vector<xyc>&Z, vector<nde>&N)
   }
 
   return;
-  for(i=1;i<(int)N.size();i++) printf("%d %d %d %d %d %d %d\n",i,
-				      N[i].a,N[i].b,N[i].c,
-				      N[i].A,N[i].B,N[i].C);
 }

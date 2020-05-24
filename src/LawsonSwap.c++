@@ -1,7 +1,6 @@
 #include <vector>
 #include <stack>
 #include "femesh.hpp"
-#include "Lawson.hpp"
 using namespace std;
 
 
