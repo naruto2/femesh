@@ -1,24 +1,10 @@
 PROG =  femesh
-SRCS =	rotate_right.c++ \
-	rotate_left.c++ \
-	N_set.c++ \
-	degeneracy.c++ \
-	super_triangle.c++ \
-	LawsonSwap.c++ \
-	vanish_boundary_triangle.c++ \
-	delaunay.c++ \
-	count_nodes.c++ \
-	generate_fN.c++ \
-	plotmesh.c++ \
-	sortmesh.c++ \
-	p2.c++ \
-	op.c++ \
-	incircle.c++ \
+SRCS =	op.c++ \
 	solver.c++ \
+	femesh.c++ \
 	fscanxyc.c++ \
-	printmesh.c++ \
-	femesh.c++ 
-
+	plotmesh.c++ \
+	printmesh.c++ 
 
 OBJS = $(SRCS:.c++=.o)
 .SUFFIXES: .c++ .o

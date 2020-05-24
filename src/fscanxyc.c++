@@ -1,4 +1,6 @@
+#include <cstdio>
 #include <cstring>
+#include <vector>
 #include "femesh.hpp"
 using namespace std;
 
