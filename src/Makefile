@@ -1,26 +1,27 @@
 PROG =  femesh
-SRCS =	op.c++ \
-	solver.c++ \
-	femesh.c++ \
-	fscanxyc.c++ \
-	plotmesh.c++ \
-	printmesh.c++ 
+SRCS =	op.cpp \
+	femesh.cpp \
+	fscanxyc.cpp \
+	plotmesh.cpp \
+	printmesh.cpp \
+	gpusolver.cpp \
+	solver.cpp 
 
-OBJS = $(SRCS:.c++=.o)
-.SUFFIXES: .c++ .o
+OBJS = $(SRCS:.cpp=.o)
+.SUFFIXES: .cpp .o
 
-CPPFLAGS = -Wall
-LDFLAGS = 
+CPPFLAGS = -g
+LDFLAGS = -lcusolver
 
 .PHONY: all clean
 
 all: $(PROG)
 
 $(PROG) : $(OBJS) 
-	c++ main.c++ $(OBJS) -o $@ $(LDFLAGS)
+	/opt/cuda/bin/nvcc main.cpp $(OBJS) -o $@ $(LDFLAGS)
 
-.c++.o:
-	c++ $(CPPFLAGS) -c $< 
+.cpp.o:
+	/opt/cuda/bin/nvcc $(CPPFLAGS) -c $< 
 
 obj: $(OBJS)
 	ar cr libfemesh.a $(OBJS)

@@ -1,18 +1,14 @@
 #ifndef _MATRIX_HPP_
 #define _MATRIX_HPP_
 
-#include <vector>
-#include <map>
-
-
-template<typename T>
-class matrix : public std::vector< std::map<long, T> > {
+template<typename Real>
+class matrix : public std::vector< std::map<long,Real> > {
 
 public:
-  matrix(){}
-  matrix(long n) : std::vector< std::map<long, T> >(n){};
+  matrix()       : std::vector< std::map<long, Real> >(){}
+  matrix(long n) : std::vector< std::map<long, Real> >(n){}
 };
 
-
-int solver(matrix<double>&A,std::vector<double>&x,std::vector<double>&b);
+int solver(matrix<double>&A,std::vector<double>&x,const std::vector<double>&b);
+int gpusolver(matrix<double>&A,std::vector<double>&x,const std::vector<double>&b);
 #endif

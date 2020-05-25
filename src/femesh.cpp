@@ -1,3 +1,4 @@
+
 #include <cstdio>
 #include <cstdlib>
 #include <vector>
@@ -5,6 +6,8 @@
 #include <iterator>
 #include <algorithm>
 #include <functional>
+#include <vector>
+#include <map>
 #include "femesh.hpp"
 #include "matrix.hpp"
 using namespace std;

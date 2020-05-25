@@ -1,3 +1,5 @@
+#include <vector>
+#include <map>
 #include "matrix.hpp"
 using namespace std;
 
@@ -27,7 +29,7 @@ void cramer3(Real *px,Real *py,Real *pz,
 }
 
 
-int solver(matrix<double>&A, vector<double>&x, vector<double>&b)
+int solver(matrix<double>&A, vector<double>&x, const vector<double>&b)
 {
   cramer3(&x[0],&x[1],&x[2],
 	  A[0][0],A[0][1],A[0][2],
