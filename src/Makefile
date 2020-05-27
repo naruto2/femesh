@@ -4,7 +4,6 @@ SRCS =	op.cpp \
 	fscanxyc.cpp \
 	plotmesh.cpp \
 	printmesh.cpp \
-	gpusolver.cpp \
 	solver.cpp 
 
 OBJS = $(SRCS:.cpp=.o)
@@ -17,7 +16,7 @@ LDFLAGS = -lcusolver
 
 all: $(PROG)
 
-$(PROG) : $(OBJS) 
+$(PROG) : $(OBJS) main.cpp
 	/opt/cuda/bin/nvcc main.cpp $(OBJS) -o $@ $(LDFLAGS)
 
 .cpp.o:
